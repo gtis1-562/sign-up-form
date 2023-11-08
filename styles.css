@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bigelow+Rules&family=Martian+Mono:wght@600&family=MedievalSharp&family=Open+Sans:ital,wght@1,500&family=Pixelify+Sans:wght@600;700&family=Roboto:ital,wght@0,300;0,700;1,300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* Image Section */
+#img-div{
+    height: 100vh;
+    width: 40%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+#img-div::before{
+    background-image: url(./ninja.jpg);
+    background-size: cover;
+    background-position: center;
+    content: '';
+    position:absolute;
+    inset: 0;
+    opacity: 0.5;
+}
+
+#title{
+    isolation: isolate;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: MedievalSharp, sans-serif;
+    font-size: xxx-large;
+    height: 70px;
+    padding-top: 10px;
+}
+.title-background{
+    background: #000;
+    width: 100%;
+}
+
+
+/* Form Section */
+.form-container{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form-field{
+    background-color: #30193F;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px 10px #60327E;
+}
+fieldset{
+    height: 90%;
+    width: 90%;
+    border:none;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+form>* {
+    flex: 2 1 40%;
+}
+h1, h2, p, label {
+    color:#fff;
+}
+input{
+    border:none;
+    width: 100%;
+    background:#30193F;
+    box-shadow: 1px 1px #60327E;
+    color: #fff;
+    transition: ease 0.3s;
+}
+input:valid{
+    border-color:green;
+    background:#30193F;
+}
+input:invalid{
+    border-color: red;
+}
+input:hover{
+    transform: scale(1.1);
+    border: 1px solid seagreen;
+}
+
+#button-div{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+}
+button{
+    height: 100%;
+    width: 60%;
+    box-shadow: 2px 2px #60327E;
+    border: none;
+    background-color: #3f2253;
+    color: #fff;
+    transition: ease 0.3s;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    box-shadow:3px 3px #3f2253, inset 0 -3em 3em #60327E;
+}
+
+@media only screen and (max-width:900px) {
+     body{
+        display: flex;
+        flex-direction: column;
+    }
+    #img-div{
+        width: 100%;
+    }
+    .form-container{
+        width: 100%;
+    }
+    #form-field{
+        height: 100%;
+    }
+}
