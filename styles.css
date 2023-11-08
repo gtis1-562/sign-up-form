@@ -20,7 +20,7 @@ body{
     position: relative;
 }
 #img-div::before{
-    background-image: url(./ninja.jpg);
+    background-image: url(./ninja.webp);
     background-size: cover;
     background-position: center;
     content: '';
@@ -102,6 +102,12 @@ input:invalid{
 input:hover{
     transform: scale(1.1);
     border: 1px solid seagreen;
+}
+
+.required{
+    color:#F396A2;
+    font-size: small;
+    margin-top: 5px;
 }
 
 #button-div{
